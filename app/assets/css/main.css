@@ -1,0 +1,48 @@
+/* @layer theme, base, components, utilities; */
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@import "./tw-module/box.css";
+@import "./tw-module/layout.css";
+@import "./tw-module/position.css";
+@import "./tw-module/variant.css";
+
+@theme {
+  /* Colors */
+  --color-white: var(--color-zinc-200);
+  --color-black: var(--color-zinc-800);
+  --color-pink-50: #fbf4f7;
+  --color-pink-100: #f8e6ed;
+  --color-pink-200: #f5d5e1;
+  --color-pink-300: #eeb3c8;
+  --color-pink-400: #e284a4;
+  --color-pink-500: #d55f84;
+  --color-pink-600: #c24062;
+  --color-pink-700: #a72f4b;
+  --color-pink-800: #8a2a3f;
+  --color-pink-900: #742738;
+  --color-pink-950: #46111c;
+
+  /* Fonts */
+  --font-sans: "Chiron GoRound TC", "Metropolis", sans-serif;
+
+  /* Screens / Breakpoints */
+  --breakpoint-sssm: 480px;
+  --breakpoint-ssm: 576px;
+
+  /* Transition Defaults */
+  --default-transition-duration: 300ms;
+  --default-transition-timing-function: ease;
+
+  /* Custom Transition Properties */
+  --transition-property-font: color, font-size, font-weight, text-align;
+  --transition-property-opacity: opacity, visibility;
+  --transition-property-hidden-rows: opacity, visibility, grid-template-rows;
+}
+
+@layer base {
+  :root {
+    --ui-primary: var(--color-primary-400);
+    --ui-text: var(--color-neutral-800);
+  }
+}

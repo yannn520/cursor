@@ -1,0 +1,18 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
+minimumReleaseAgeExclude:
+  - '@oliver139/eslint-config@7.5.2'
+shellEmulator: true
+
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - semver@6.3.1
+  - tinyexec@1.2.2
+  - tinyclip@0.1.13
+
+useNodeVersion: 24.14.1
