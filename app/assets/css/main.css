@@ -13,7 +13,7 @@
   --color-black: var(--color-zinc-800);
   --color-pink-50: #fbf4f7;
   --color-pink-100: #f8e6ed;
-  --color-pink-200: #f5d5e1;
+  --color-pink-200: oklch(90.307% 0.03882 353.125);
   --color-pink-300: #eeb3c8;
   --color-pink-400: #e284a4;
   --color-pink-500: #d55f84;
@@ -44,5 +44,19 @@
   :root {
     --ui-primary: var(--color-primary-400);
     --ui-text: var(--color-neutral-800);
+    --ui-bg: var(--color-primary-100);
+    --ui-container: 48rem;
+  }
+
+  body {
+    background-image: url("/images/diamond.svg");
+  }
+
+  a {
+    @apply border-b border-b-transparent;
+    @apply transition-all;
+    &:hover {
+      @apply border-b-current;
+    }
   }
 }
