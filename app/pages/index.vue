@@ -28,14 +28,13 @@
 
     <SectionBox class="mt-10">
       <NuxtLink
-        href="/files/yannn520-cursor.zip"
+        to="/cursor/files/yannn520-cursor.zip"
         class="
           -mx-8 -mt-8 mb-8 flex items-center
           justify-center gap-2 bg-pink-500 p-4 text-center
           text-xl font-medium text-white transition-colors
           hover:bg-pink-600
         "
-        download
         external
         @click="isDownload = true"
       >
