@@ -28,13 +28,14 @@
 
     <SectionBox class="mt-10">
       <NuxtLink
-        to="/cursor/files/yannn520-cursor.zip"
+        :to="withBase('/files/yannn520-cursor.zip', app.baseURL)"
         class="
           -mx-8 -mt-8 mb-8 flex items-center
           justify-center gap-2 bg-pink-500 p-4 text-center
           text-xl font-medium text-white transition-colors
           hover:bg-pink-600
         "
+        download
         external
         @click="isDownload = true"
       >
@@ -60,6 +61,10 @@
 </template>
 
 <script setup lang="ts">
+import { withBase } from 'ufo'
+
+const { app } = useRuntimeConfig()
+
 const isDownload = shallowRef(false)
 </script>
 

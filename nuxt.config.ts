@@ -1,10 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
+import { withBase } from 'ufo'
 
 const SITE_NAME = '黫桃小丸子的小游標'
 const SITE_DESC = '來下載我的可愛小游標吧！'
 const SITE_URL = 'https://yannn520.github.io/cursor/'
-const SITE_IMG = `${SITE_URL}/thumbnail.jpg`
+const SITE_IMG = `${SITE_URL}thumbnail.jpg`
+
+export const baseURL = '/cursor/'
 
 export default defineNuxtConfig({
   modules: [
@@ -23,14 +26,15 @@ export default defineNuxtConfig({
   ],
 
   devtools: { enabled: true },
+
   app: {
-    baseURL: '/cursor/',
+    baseURL,
     head: {
       title: SITE_NAME,
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: withBase('/favicon-96x96.png', baseURL), sizes: '96x96' },
+        { rel: 'icon', type: 'image/svg+xml', href: withBase('/favicon.svg', baseURL) },
+        { rel: 'shortcut icon', href: withBase('/favicon.ico', baseURL) },
       ],
       meta: [
         { name: 'description', content: SITE_DESC },

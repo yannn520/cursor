@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  baseURL: '/cursor/',
   ui: {
     colors: {
       primary: 'pink',
