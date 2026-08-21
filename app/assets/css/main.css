@@ -1,19 +1,21 @@
-/* @layer theme, base, components, utilities; */
+
+@import "./modules/fonts.css";
+
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@import "./tw-module/box.css";
-@import "./tw-module/layout.css";
-@import "./tw-module/position.css";
-@import "./tw-module/variant.css";
+@import "./tw-modules/box.css";
+@import "./tw-modules/layout.css";
+@import "./tw-modules/position.css";
+@import "./tw-modules/variant.css";
 
 @theme {
   /* Colors */
-  --color-white: var(--color-zinc-200);
+  --color-white: var(--color-zinc-100);
   --color-black: var(--color-zinc-800);
   --color-pink-50: #fbf4f7;
   --color-pink-100: #f8e6ed;
-  --color-pink-200: oklch(90.307% 0.03882 353.125);
+  --color-pink-200: #f5d5e1;
   --color-pink-300: #eeb3c8;
   --color-pink-400: #e284a4;
   --color-pink-500: #d55f84;
@@ -24,7 +26,7 @@
   --color-pink-950: #46111c;
 
   /* Fonts */
-  --font-sans: "Chiron GoRound TC", "Metropolis", sans-serif;
+  --font-sans: Quicksand, "Chill Round Gothic", sans-serif;
 
   /* Screens / Breakpoints */
   --breakpoint-sssm: 480px;
@@ -40,23 +42,21 @@
   --transition-property-hidden-rows: opacity, visibility, grid-template-rows;
 }
 
-@layer base {
-  :root {
-    --ui-primary: var(--color-primary-400);
-    --ui-text: var(--color-neutral-800);
-    --ui-bg: var(--color-primary-100);
-    --ui-container: 48rem;
-  }
+:root {
+  --ui-primary: var(--color-primary-400);
+  --ui-text: var(--color-neutral-800);
+  --ui-bg: var(--color-primary-100);
+  --ui-container: 48rem;
+}
 
-  body {
-    background-image: url("/images/diamond.svg");
-  }
+body {
+  background-image: url("/images/diamond.svg");
+}
 
-  a {
-    @apply border-b border-b-transparent;
-    @apply transition-all;
-    &:hover {
-      @apply border-b-current;
-    }
+.underline-link {
+  @apply border-b border-b-transparent;
+  @apply transition-all;
+  &:hover {
+    @apply border-b-current;
   }
 }

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC&family=Quicksand:wght@300..700&display=swap');
+
+@font-face {
+	font-family: "Chill Round Gothic";
+	src: url("../../fonts/ChillRoundGothic_Normal.otf") format("opentype");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Chill Round Gothic";
+	src: url("../../fonts/ChillRoundGothic_Medium.otf") format("opentype");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}

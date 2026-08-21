@@ -1,15 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
 
-const SITE_NAME = '黫桃小丸子的小遊標'
-const SITE_DESC = '來下載我的可愛小遊標吧！'
+const SITE_NAME = '黫桃小丸子的小游標'
+const SITE_DESC = '來下載我的可愛小游標吧！'
 const SITE_URL = 'https://yannn520.github.io/'
 const SITE_IMG = `${SITE_URL}/thumbnail.jpg`
 
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/ui',
@@ -76,15 +75,9 @@ export default defineNuxtConfig({
     },
   },
 
-  fonts: {
-    defaults: {
-      weights: [300, 400, 500, 600, 700],
-      styles: ['normal', 'italic'],
+  icon: {
+    clientBundle: {
+      scan: true,
     },
-    priority: ['fontsource', 'bunny', 'google'],
-    families: [
-      { name: 'Chiron GoRound TC' },
-      { name: 'Metropolis' },
-    ],
   },
 })
