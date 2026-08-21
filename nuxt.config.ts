@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 const SITE_NAME = '黫桃小丸子的小游標'
 const SITE_DESC = '來下載我的可愛小游標吧！'
-const SITE_URL = 'https://yannn520.github.io/'
+const SITE_URL = 'https://yannn520.github.io/cursor/'
 const SITE_IMG = `${SITE_URL}/thumbnail.jpg`
 
 export default defineNuxtConfig({
