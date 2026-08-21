@@ -27,7 +27,7 @@
     </SectionBox>
 
     <SectionBox class="mt-10">
-      <a
+      <NuxtLink
         href="/files/yannn520-cursor.zip"
         class="
           -mx-8 -mt-8 mb-8 flex items-center
@@ -36,6 +36,7 @@
           hover:bg-pink-600
         "
         download
+        external
         @click="isDownload = true"
       >
         <template v-if="isDownload">
@@ -46,7 +47,7 @@
           <Icon name="i-mingcute-download-2-line" />
           <span>下載游標</span>
         </template>
-      </a>
+      </NuxtLink>
       <div
         class="
           grid grid-col-auto-fill-36 items-center justify-items-center gap-x-4
